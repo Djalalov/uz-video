@@ -7,14 +7,16 @@ const Thumbnail = ({ result }) => {
 		<div>
 			<Image
 				alt=""
-				width={1080}
-				height={1920}
+				width={1920}
+				height={1080}
 				layout="responsive"
 				src={
 					`${BASE_URL}${result.backdrop_path || result.poster_path}` ||
 					`${BASE_URL}${result.poster_path}`
 				}
 			/>
+
+			<div></div>
 		</div>
 	);
 };
