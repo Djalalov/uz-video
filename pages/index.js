@@ -7,18 +7,19 @@ import requests from "../utils/requests";
 
 export default function Home(props) {
 	return (
-		<div className="">
+		<div className="flex min-h-screen flex-col">
 			<Head>
 				<title>Uz Video</title>
 			</Head>
 
-			{/* Header */}
 			<Header />
-			{/* Nav */}
-			<Nav />
-
-			{/* Body */}
 			<main>
+				{/* Header */}
+				{/* Nav */}
+				<Nav />
+
+				{/* Body */}
+
 				<Results results={props.res} />
 			</main>
 		</div>
