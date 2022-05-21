@@ -9,7 +9,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 	return (
 		<div
 			ref={ref}
-			className="group cursor-pointer rounded-xl transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 lg:m-2 sm:max-w-md lg:max-w-lg lg:mt-10"
+			className="group cursor-pointer sm:rounded-xl transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 mb-5 border-b border-slate-300 lg:m-2 sm:max-w-md lg:max-w-lg lg:mt-10"
 		>
 			<Image
 				className="sm:rounded-xl"
@@ -28,7 +28,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 				<h2 className="mt-1 text-2xl text-slate-700 transition-all duration-100 ease-in-out group-hover:font-bold">
 					{result.title || result.original_name}
 				</h2>
-				<p className="flex items-center opacity-0 group-hover:opacity-100">
+				<p className="flex items-center sm:opacity-0 sm:group-hover:opacity-100">
 					{result.media_type && `${result.media_type} * `}{" "}
 					{result.release_date || result.first_air_date} *
 					<ThumbUpIcon className="h-5 mx-2" /> {result.vote_count}
