@@ -12,15 +12,15 @@ export default function Home(props) {
 				<title>Uz Video</title>
 			</Head>
 
+			{/* Header */}
 			<Header />
 			<main>
-				{/* Header */}
 				{/* Nav */}
-				<Nav />
-
+				{/* 	<Nav />
+				 */}
 				{/* Body */}
 
-				<Results results={props.res} />
+				<Results results={props.results} />
 			</main>
 		</div>
 	);
@@ -29,11 +29,17 @@ export default function Home(props) {
 export async function getServerSideProps(context) {
 	const genre = context.query.genre;
 
-	const res = await fetch(
-		`https://api.themoviedb.org/3${requests[genre]?.url}`
-	).then(res => res.json());
+	if (!genre) {
+		var response = await fetch(
+			`https://api.themoviedb.org/3${requests.fetchTrending.url}`
+		).then(res => res.json());
+	} else {
+		response = await fetch(
+			`https://api.themoviedb.org/3${requests[genre]?.url}`
+		).then(res => res.json());
+	}
 
-	if (!res) {
+	if (!response) {
 		return {
 			notFound: true,
 		};
@@ -41,7 +47,7 @@ export async function getServerSideProps(context) {
 
 	return {
 		props: {
-			res: res.results,
+			results: response.results,
 		},
 	};
 }
