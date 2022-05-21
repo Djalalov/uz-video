@@ -9,10 +9,10 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 	return (
 		<div
 			ref={ref}
-			className="group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50"
+			className="group cursor-pointer rounded-xl transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 lg:m-2 sm:max-w-md lg:max-w-lg lg:mt-10"
 		>
 			<Image
-				className="rounded-xl"
+				className="sm:rounded-xl"
 				alt=""
 				width={1920}
 				height={1080}
@@ -25,7 +25,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 
 			<div className="p-2">
 				<p className="truncate max-w-md">{result.overview}</p>
-				<h2 className="mt-1 text-2xl text-white transition-all duration-100 ease-in-out group-hover:font-bold">
+				<h2 className="mt-1 text-2xl text-slate-700 transition-all duration-100 ease-in-out group-hover:font-bold">
 					{result.title || result.original_name}
 				</h2>
 				<p className="flex items-center opacity-0 group-hover:opacity-100">

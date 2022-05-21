@@ -16,8 +16,8 @@ export default function Home(props) {
 			<Header />
 			<main>
 				{/* Nav */}
-				{/* 	<Nav />
-				 */}
+				<Nav />
+
 				{/* Body */}
 
 				<Results results={props.results} />
