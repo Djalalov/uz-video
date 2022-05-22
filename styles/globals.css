@@ -8,13 +8,13 @@
 	}
 
 	header {
-		@apply fixed top-0 z-50 flex-col lg:flex-row lg:px-4 w-full items-center justify-center md:justify-between bg-gray-900/30;
+		@apply fixed top-0 z-50 flex-col lg:flex-row lg:px-4 w-full items-center justify-center md:justify-between bg-gray-700/50;
 	}
 }
 
 @layer components {
 	.btn {
-		@apply text-lg rounded-full px-2 py-1  focus:outline-none focus:text-orange-400 transition duration-200 ease-in last:mr-10 cursor-pointer transform hover:scale-110;
+		@apply text-lg rounded-full px-2 py-1 border-2 border-slate-400 focus:outline-none focus:text-orange-400 focus:border-orange-400 font-bold transition duration-200 ease-in last:mr-10 cursor-pointer transform hover:scale-x-105;
 	}
 
 	.bannerBtn {
