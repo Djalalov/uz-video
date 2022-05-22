@@ -1,8 +1,7 @@
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import HeaderItem from "./HeaderItem";
-import { useRouter } from "next/router";
-import requests from "../../utils/requests";
+import { useState, useEffect } from "react";
 
 import {
 	BadgeCheckIcon,
@@ -14,10 +13,25 @@ import {
 } from "@heroicons/react/outline";
 
 const Header = () => {
-	const router = useRouter();
+	const [isSrolled, setIsSrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 0) {
+				setIsSrolled(true);
+			} else {
+				setIsSrolled(false);
+			}
+		};
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	return (
-		<header className="flex flex-col md:flex-row px-6 lg:pt-2 justify-between items-center lg:mb-10">
+		<header className={`${isSrolled && "bg-[#f9f9f9e7]"}`}>
 			<div>
 				<Image
 					src={logo}

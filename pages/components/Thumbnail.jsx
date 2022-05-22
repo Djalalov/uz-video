@@ -9,7 +9,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 	return (
 		<div
 			ref={ref}
-			className="group cursor-pointer sm:rounded-xl transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 mb-5 border-b border-slate-300 lg:m-2 sm:max-w-md lg:max-w-lg lg:mt-10"
+			className="group cursor-pointer sm:rounded-xl transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 mb-5 sm:mb-0 xs:border-b border-slate-300 sm:m-2 sm:max-w-md lg:max-w-lg lg:mt-5"
 		>
 			<Image
 				className="sm:rounded-xl"

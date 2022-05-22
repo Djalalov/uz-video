@@ -6,15 +6,15 @@ const Nav = () => {
 
 	return (
 		<nav className="relative">
-			<div className="flex px-5 sm:px-8 whitespace-nowrap space-x-12 mt-4 sm:space-x-10 overflow-x-scroll scrollbar-hide">
+			<div className="flex px-5 sm:px-8 whitespace-nowrap space-x-12 mt-32 sm:space-x-10 overflow-x-scroll scrollbar-hide items-center">
 				{Object.entries(requests).map(([key, { title, url }]) => (
-					<h2
+					<button
 						key={key}
 						onClick={() => router.push(`/?genre=${key}`)}
-						className="last:pr-10 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-amber-500 active:text-red-500"
+						className="btn text-center"
 					>
 						{title}
-					</h2>
+					</button>
 				))}
 			</div>
 			<div className="absolute top-0 right-0 bg-gradient-to-l from-[#f6f6f6] h-10 w-1/6" />

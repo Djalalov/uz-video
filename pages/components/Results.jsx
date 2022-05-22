@@ -5,8 +5,8 @@ const Results = ({ results }) => {
 	//console.log(results);
 
 	return (
-		<FlipMove className="mt-8 pt-4">
-			<div className="sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center">
+		<FlipMove className="mt-4 pt-4">
+			<div className="sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:mx-5 3xl:flex flex-wrap justify-center">
 				{results.map(result => (
 					<Thumbnail key={result.id} result={result} />
 				))}
