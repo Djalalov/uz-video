@@ -17,7 +17,7 @@ const Nav = () => {
 					</button>
 				))}
 			</div>
-			<div className="absolute top-0 right-0 bg-gradient-to-l from-[#f6f6f6] h-10 w-1/6" />
+			<div className="absolute top-0 right-0 bg-gradient-to-l from-[#f6f6f6] h-10 w-1/6 sm:hidden" />
 		</nav>
 	);
 };

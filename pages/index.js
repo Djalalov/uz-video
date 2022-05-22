@@ -4,10 +4,12 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Results from "./components/Results";
 import requests from "../utils/requests";
+import Banner from "./components/Banner";
 
 export default function Home(props) {
+	console.log(props.results);
 	return (
-		<div className="flex min-h-screen flex-col relative">
+		<div className="flex min-h-screen flex-col relative bg-gradient-to-b from-slate-300/10 to-orange-200/70">
 			<Head>
 				<title>Uz Video</title>
 			</Head>
@@ -15,6 +17,7 @@ export default function Home(props) {
 			{/* Header */}
 			<Header />
 			<main>
+				<Banner trends={props.results} />
 				{/* Nav */}
 				<Nav />
 
