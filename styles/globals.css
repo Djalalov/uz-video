@@ -4,11 +4,11 @@
 
 @layer base {
 	body {
-		@apply bg-[#f5f5f5] text-slate-200 !scrollbar-hide !scrollbar-track-transparent !scrollbar-thumb-orange-500;
+		@apply bg-[#f5f5f5] text-slate-300 !scrollbar-hide !scrollbar-track-transparent !scrollbar-thumb-orange-500;
 	}
 
 	header {
-		@apply fixed top-0 z-50 flex w-full items-center justify-between md:flex-row px-6;
+		@apply fixed top-0 z-50 flex-col lg:flex-row w-full items-center justify-center md:justify-between bg-gray-900/10;
 	}
 }
 

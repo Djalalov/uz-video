@@ -3,6 +3,8 @@ import logo from "../../public/logo.png";
 import HeaderItem from "./HeaderItem";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Nav from "./Nav";
+
 import {
 	BadgeCheckIcon,
 	CollectionIcon,
@@ -33,19 +35,20 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className={`${isSrolled && "bg-[#f9f9f9e7]"}`}>
+		<header className={`${isSrolled && "bg-gray-600/70 backdrop-blur-md"}`}>
 			<div>
 				<Image
 					src={logo}
 					alt="logo"
 					width="180"
 					height="75"
-					className="object-contain flex-grow xl:ml-10"
+					className="object-contain"
 				/>
 			</div>
-			<div className="flex gap-4 max-w-2xl sm:mt-14 md:mt-4 lg:pt-2 translate-y-2 ">
-				<HeaderItem title="ASOSIY" Icon={HomeIcon} />
-				<HeaderItem
+			<Nav />
+			<div className="hidden md:flex gap-4 max-w-2xl md:mt-4 lg:pt-2 translate-y-2 ">
+				{/* 	<HeaderItem title="ASOSIY" Icon={HomeIcon} /> */}
+				{/* 		<HeaderItem
 					title="TREND"
 					Icon={LightningBoltIcon}
 					onClick={() => {
@@ -53,7 +56,7 @@ const Header = () => {
 					}}
 				/>
 				<HeaderItem title="TASDIQLANGAN" Icon={BadgeCheckIcon} />
-				<HeaderItem title="KOLLEKSIYA" Icon={CollectionIcon} />
+				<HeaderItem title="KOLLEKSIYA" Icon={CollectionIcon} /> */}
 				<HeaderItem title="QIDIRUV" Icon={SearchIcon} />
 				<HeaderItem title="PROFIL" Icon={UserIcon} />
 			</div>{" "}
