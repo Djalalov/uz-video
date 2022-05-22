@@ -8,12 +8,12 @@
 	}
 
 	header {
-		@apply fixed top-0 z-50 flex w-full items-center justify-between flex-col md:flex-row px-6;
+		@apply fixed top-0 z-50 flex w-full items-center justify-between md:flex-row px-6;
 	}
 }
 
 @layer components {
 	.btn {
-		@apply text-lg border  rounded-full px-2 py-1 hover:bg-zinc-300 active:bg-amber-100 focus:outline-none focus:bg-orange-400 transition duration-200 ease-in last:pr-10 cursor-pointer transform hover:scale-110;
+		@apply text-lg border-2 rounded-full px-2 py-1  focus:outline-none focus:border-orange-400 transition duration-200 ease-in last:mr-10 cursor-pointer transform hover:scale-105 hover:border-orange-400;
 	}
 }

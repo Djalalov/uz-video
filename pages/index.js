@@ -7,7 +7,7 @@ import requests from "../utils/requests";
 
 export default function Home(props) {
 	return (
-		<div className="flex min-h-screen flex-col">
+		<div className="flex min-h-screen flex-col relative">
 			<Head>
 				<title>Uz Video</title>
 			</Head>

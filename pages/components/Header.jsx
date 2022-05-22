@@ -2,7 +2,7 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import HeaderItem from "./HeaderItem";
 import { useState, useEffect } from "react";
-
+import { useRouter } from "next/router";
 import {
 	BadgeCheckIcon,
 	CollectionIcon,
@@ -13,6 +13,8 @@ import {
 } from "@heroicons/react/outline";
 
 const Header = () => {
+	const router = useRouter();
+
 	const [isSrolled, setIsSrolled] = useState(false);
 
 	useEffect(() => {
@@ -41,9 +43,15 @@ const Header = () => {
 					className="object-contain flex-grow xl:ml-10"
 				/>
 			</div>
-			<div className="flex gap-4 max-w-2xl sm:mt-14 md:mt-4 lg:mt-6 translate-y-2">
+			<div className="flex gap-4 max-w-2xl sm:mt-14 md:mt-4 lg:pt-2 translate-y-2 ">
 				<HeaderItem title="ASOSIY" Icon={HomeIcon} />
-				<HeaderItem title="TREND" Icon={LightningBoltIcon} />
+				<HeaderItem
+					title="TREND"
+					Icon={LightningBoltIcon}
+					onClick={() => {
+						router.push("http://localhost:3000/?genre=fetchTrending");
+					}}
+				/>
 				<HeaderItem title="TASDIQLANGAN" Icon={BadgeCheckIcon} />
 				<HeaderItem title="KOLLEKSIYA" Icon={CollectionIcon} />
 				<HeaderItem title="QIDIRUV" Icon={SearchIcon} />
