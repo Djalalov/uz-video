@@ -9,7 +9,7 @@ import Banner from "./components/Banner";
 export default function Home(props) {
 	console.log(props.results);
 	return (
-		<div className="flex min-h-screen flex-col relative bg-gradient-to-b from-slate-300/10 to-orange-200/70">
+		<div className="flex min-h-screen flex-col relative bg-gradient-to-b  to-orange-200/30 ">
 			<Head>
 				<title>Uz Video</title>
 			</Head>
@@ -23,7 +23,7 @@ export default function Home(props) {
 
 				{/* Body */}
 
-				<Results results={props.results} />
+				{/* 	<Results results={props.results} /> */}
 			</main>
 		</div>
 	);

@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-[#f5f5f5] text-slate-700;
+		@apply bg-[#f5f5f5] text-slate-200;
 	}
 
 	header {
@@ -15,5 +15,9 @@
 @layer components {
 	.btn {
 		@apply text-lg border-2 rounded-full px-2 py-1  focus:outline-none focus:border-orange-400 transition duration-200 ease-in last:mr-10 cursor-pointer transform hover:scale-105;
+	}
+
+	.bannerBtn {
+		@apply flex items-center gap-x-2 rounded px-5 text-sm py-2 font-semibold transition hover:opacity-75 md:py-3 md:px-8 md:text-xl;
 	}
 }
