@@ -16,14 +16,14 @@ export default function Home(props) {
 
 			{/* Header */}
 			<Header />
-			<main>
+			<main className="relative pb-24 lg:space-y-24">
 				<Banner trends={props.results} />
 				{/* Nav */}
 				<Nav />
 
 				{/* Body */}
 
-				{/* 	<Results results={props.results} /> */}
+				<Results results={props.results} />
 			</main>
 		</div>
 	);

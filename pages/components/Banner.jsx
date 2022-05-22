@@ -24,21 +24,24 @@ const Banner = ({ trends }) => {
 				/>
 			</div>
 
-			<h1 className="text-2xl md:text-4xl lg:text-7xl">
-				{movie?.title || movie?.name || movie?.original_name}
-			</h1>
-			<p className="max-w-xs text-xs md:max-w-lg lg:max-w-2xl lg:text-2xl">
-				{movie?.overview}
-			</p>
+			<div className="space-y-4 bg-gray-900/50 max-w-fit p-4">
+				<h1 className="text-2xl md:text-4xl lg:text-7xl">
+					{movie?.title || movie?.name || movie?.original_name}
+				</h1>
+				<p className=" max-w-xs text-xs md:max-w-lg lg:max-w-2xl lg:text-xl">
+					{movie?.overview}
+				</p>
 
-			<div className="flex space-x-3">
-				<button className="bannerBtn bg-white text-black">
-					<FaPlay className="h-4 w-4 text-black md:h-7 md:w-7" />
-					Play
-				</button>
-				<button className="bannerBtn bg-gray-600/70">
-					More Info <InformationCircleIcon className="h-5 w-5 md:h-8 md:w-8" />
-				</button>
+				<div className="flex space-x-3">
+					<button className="bannerBtn bg-white text-black">
+						<FaPlay className="h-4 w-4 text-black md:h-5 md:w-5pg" />
+						Play
+					</button>
+					<button className="bannerBtn bg-gray-600/70">
+						More Info{" "}
+						<InformationCircleIcon className="h-5 w-5 md:h-6 md:w-6" />
+					</button>
+				</div>
 			</div>
 		</div>
 	);
