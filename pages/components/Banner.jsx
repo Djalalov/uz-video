@@ -24,7 +24,7 @@ const Banner = ({ trends }) => {
 				/>
 			</div>
 
-			<div className="space-y-4 bg-gray-900/50 max-w-fit p-4">
+			<div className="space-y-4 bg-gray-900/50 max-w-fit p-4 lg:mb-12">
 				<h1 className="text-2xl md:text-4xl lg:text-7xl">
 					{movie?.title || movie?.name || movie?.original_name}
 				</h1>

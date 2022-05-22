@@ -35,8 +35,10 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className={`${isSrolled && "bg-gray-600/70 backdrop-blur-md"}`}>
-			<div>
+		<header
+			className={`${isSrolled && "bg-gray-600/70 backdrop-blur-md"} lg:flex`}
+		>
+			<div className="flex">
 				<Image
 					src={logo}
 					alt="logo"
@@ -44,8 +46,8 @@ const Header = () => {
 					height="75"
 					className="object-contain"
 				/>
+				<Nav />
 			</div>
-			<Nav />
 			<div className="hidden md:flex gap-4 max-w-2xl md:mt-4 lg:pt-2 translate-y-2 ">
 				{/* 	<HeaderItem title="ASOSIY" Icon={HomeIcon} /> */}
 				{/* 		<HeaderItem
