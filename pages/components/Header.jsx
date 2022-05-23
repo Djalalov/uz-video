@@ -35,11 +35,9 @@ const Header = () => {
 
 	return (
 		<header
-			className={`${
-				isSrolled && "bg-gray-600/70 backdrop-blur-sm"
-			} lg:flex-row`}
+			className={`${isSrolled && "bg-gray-600/70 backdrop-blur-sm"} w-full `}
 		>
-			<div>
+			<div className="pl-2">
 				<Image
 					src={logo}
 					alt="logo"
@@ -48,7 +46,7 @@ const Header = () => {
 					objectFit="contain"
 				/>
 			</div>
-			<div className="hidden md:flex gap-4 max-w-2xl md:mt-4 lg:pt-2 translate-y-2 ">
+			<div className="flex translate-y-5">
 				{/* 	<HeaderItem title="ASOSIY" Icon={HomeIcon} /> */}
 				{/* 		<HeaderItem
 					title="TREND"

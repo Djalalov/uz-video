@@ -8,7 +8,7 @@
 	}
 
 	header {
-		@apply fixed top-0 z-50 flex-col items-center justify-center lg:flex-row lg:px-4 md:w-full md:justify-between bg-gray-700/50;
+		@apply fixed top-0 z-50 flex items-center justify-between lg:px-4 bg-gray-700/50;
 	}
 }
 
