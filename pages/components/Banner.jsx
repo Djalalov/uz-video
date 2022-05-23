@@ -14,8 +14,8 @@ const Banner = ({ trends }) => {
 
 	//console.log(`${baseUrl}${movie?.backdrop_path || movie.poster_path}`);
 	return (
-		<div className="flex flex-col md:space-y-4 lg:h-[64vh] ">
-			<div className="absolute top-0 left-0 h-[60vh] w-screen -z-50">
+		<div className="flex flex-col lg:h-[80vh]">
+			<div className="absolute top-0 left-0 h-[64vh] lg:h-[80vh] w-screen -z-50">
 				<Image
 					src={`${baseUrl}${movie?.backdrop_path}`}
 					alt=""
@@ -25,7 +25,7 @@ const Banner = ({ trends }) => {
 				/>
 			</div>
 
-			<div className="space-y-4 bg-gray-600/50 max-w-fit p-4 mt-64">
+			<div className="space-y-4 md:space-y-8 bg-gray-600/50 max-w-fit p-4 mt-64">
 				<h1 className="text-2xl md:text-4xl lg:text-7xl">
 					{movie?.title || movie?.name || movie?.original_name}
 				</h1>

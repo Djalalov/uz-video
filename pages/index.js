@@ -8,14 +8,14 @@ import Nav from "./components/Nav";
 
 export default function Home(props) {
 	return (
-		<div className="flex min-h-screen flex-col relative  md:bg-gradient-to-b ">
+		<div className="flex min-h-screen flex-col relative">
 			<Head>
 				<title>Uz Video</title>
 			</Head>
 			<Header />
 			<Banner trends={props.results} />
 			<Nav />
-			<main className="relative md:pt-28 lg:space-y-24">
+			<main className="relative lg:space-y-24">
 				<Results results={props.results} />
 			</main>
 		</div>
