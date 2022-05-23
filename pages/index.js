@@ -1,10 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
-import Header from "./components/Header";
-import Results from "./components/Results";
+import Header from "../components/Header";
+import Results from "../components/Results";
 import requests from "../utils/requests";
-import Banner from "./components/Banner";
-import Nav from "./components/Nav";
+import Banner from "../components/Banner";
+import Nav from "../components/Nav";
 
 export default function Home(props) {
 	return (

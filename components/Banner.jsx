@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { baseUrl } from "../../utils/const";
+import { baseUrl } from "../utils/const";
 import { FaPlay } from "react-icons/fa";
 import { InformationCircleIcon } from "@heroicons/react/outline";
 
