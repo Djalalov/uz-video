@@ -5,7 +5,7 @@ const Results = ({ results }) => {
 	//console.log(results);
 
 	return (
-		<FlipMove className="mt-36">
+		<FlipMove className="bg-zinc-900 md:bg-inherit">
 			<div className="sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:mx-5 3xl:flex flex-wrap justify-center">
 				{results.map(result => (
 					<Thumbnail key={result.id} result={result} />

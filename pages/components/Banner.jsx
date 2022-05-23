@@ -14,17 +14,18 @@ const Banner = ({ trends }) => {
 
 	//console.log(`${baseUrl}${movie?.backdrop_path || movie.poster_path}`);
 	return (
-		<div className="flex flex-col py-16 space-y-2 md:space-y-4 lg:h-[64vh] lg:pb-12">
-			<div className="absolute top-0 left-0 h-[95vh] w-screen -z-50">
+		<div className="flex flex-col md:space-y-4 lg:h-[64vh] ">
+			<div className="absolute top-0 left-0 h-[60vh] w-screen -z-50">
 				<Image
 					src={`${baseUrl}${movie?.backdrop_path}`}
 					alt=""
 					layout="fill"
 					objectFit="cover"
+					priority
 				/>
 			</div>
 
-			<div className="space-y-4 bg-gray-600/50 max-w-fit p-4 lg:mb-12">
+			<div className="space-y-4 bg-gray-600/50 max-w-fit p-4 mt-64">
 				<h1 className="text-2xl md:text-4xl lg:text-7xl">
 					{movie?.title || movie?.name || movie?.original_name}
 				</h1>

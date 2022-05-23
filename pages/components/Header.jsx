@@ -3,7 +3,6 @@ import logo from "../../public/logo.png";
 import HeaderItem from "./HeaderItem";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Nav from "./Nav";
 
 import {
 	BadgeCheckIcon,
@@ -36,18 +35,19 @@ const Header = () => {
 
 	return (
 		<header
-			className={`${isSrolled && "bg-gray-600/70 backdrop-blur-md"} lg:flex`}
+			className={`${
+				isSrolled && "bg-gray-600/70 backdrop-blur-sm"
+			} lg:flex-row`}
 		>
-			<div className="flex">
+			<div>
 				<Image
 					src={logo}
 					alt="logo"
 					width="180"
 					height="75"
-					className="object-contain"
+					objectFit="contain"
 				/>
 			</div>
-			<Nav />
 			<div className="hidden md:flex gap-4 max-w-2xl md:mt-4 lg:pt-2 translate-y-2 ">
 				{/* 	<HeaderItem title="ASOSIY" Icon={HomeIcon} /> */}
 				{/* 		<HeaderItem
