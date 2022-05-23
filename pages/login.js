@@ -1,5 +1,63 @@
+import Head from "next/head";
+import Image from "next/image";
+import bgImage from "../public/bgImage.jpg";
+import logo from "../public/logo.png";
+import { useState } from "react";
+
 const Login = () => {
-	return <div>login</div>;
+	const [login, setLogin] = useState(false);
+
+	return (
+		<div className="bg-black opacity-100 relative flex h-screen w-screen flex-col items-center md:bg-transparent">
+			<Head>
+				<title>Uz Video</title>
+			</Head>
+
+			<Image
+				src={bgImage}
+				alt=""
+				layout="fill"
+				className="-z-10 !hidden sm:!inline opacity-50"
+				objectFit="cover"
+			/>
+
+			<form className="relative space-y-8 rounded bg-black/75 py-10 px-6 text-slate-300 md:max-w-md md:px-14 md:mt-52">
+				<div className="pl-8 text-center">
+					<Image
+						src={logo}
+						alt="logo"
+						width={200}
+						height={80}
+						objectFit="contain"
+					/>
+				</div>
+
+				<h1 className="text-2xl font-semibold ">Tizimga kiring</h1>
+				<div className="space-y-4">
+					<label className="inline-block w-full text-slate-300">
+						<input type="email" placeholder="Email" className="input" />
+					</label>
+					<label className="inline-block w-full text-slate-300">
+						<input type="password" placeholder="Kalit" className="input" />
+					</label>
+				</div>
+
+				<button className="w-full rounded bg-gradient-to-r from-amber-500 via-orange-600 to-red-500  py-2 font-semibold text-black text-lg cursor-pointer">
+					Kirish
+				</button>
+
+				<div className="text-[gray]">
+					Profilingiz yo&apos;qmi ?
+					<button type="submit" className="hover:underline ml-4 text-slate-300">
+						Ro&apos;yhatdan o&apos;ting
+					</button>
+				</div>
+			</form>
+			<footer className="flex items-center justify-center mt-80 md:mt-48 text-[#333] md:text-black/80 text-sm px-3 font-semibold md:text-lg">
+				<div>Uz Video | Elyorbek Djalalov | 2022</div>
+			</footer>
+		</div>
+	);
 };
 
 export default Login;

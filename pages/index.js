@@ -9,7 +9,7 @@ export default function Home(props) {
 	return (
 		<div className="flex min-h-screen flex-col relative">
 			<Head>
-				<title>Uz Video</title>
+				<title>Asosiy | Uz Video</title>
 			</Head>
 			<Header />
 			<Banner trends={props.results} />
