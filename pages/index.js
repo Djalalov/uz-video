@@ -4,8 +4,15 @@ import Results from "../components/Results";
 import requests from "../utils/requests";
 import Banner from "../components/Banner";
 import Nav from "../components/Nav";
+import useAuth from "../hooks/useAuth";
 
 export default function Home(props) {
+	const { loading } = useAuth();
+
+	if (loading) {
+		return null;
+	}
+
 	return (
 		<div className="flex min-h-screen flex-col relative">
 			<Head>

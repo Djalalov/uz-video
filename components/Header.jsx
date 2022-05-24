@@ -12,10 +12,11 @@ import {
 	SearchIcon,
 	UserIcon,
 } from "@heroicons/react/outline";
+import useAuth from "../hooks/useAuth";
 
 const Header = () => {
+	const { logout } = useAuth();
 	const router = useRouter();
-
 	const [isSrolled, setIsSrolled] = useState(false);
 
 	useEffect(() => {
@@ -59,6 +60,9 @@ const Header = () => {
 				<HeaderItem title="KOLLEKSIYA" Icon={CollectionIcon} /> */}
 				<HeaderItem title="QIDIRUV" Icon={SearchIcon} />
 				<HeaderItem title="PROFIL" Icon={UserIcon} />
+				<button onClick={logout} className="btn">
+					Chiqish
+				</button>
 			</div>{" "}
 		</header>
 	);
