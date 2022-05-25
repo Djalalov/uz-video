@@ -36,7 +36,7 @@ const Header = () => {
 
 	return (
 		<header
-			className={`${isSrolled && "bg-gray-600/70 backdrop-blur-sm"} w-full `}
+			className={`${isSrolled && "bg-black/40 backdrop-blur-sm"} w-full `}
 		>
 			<div className="pl-2">
 				<Image
@@ -58,13 +58,13 @@ const Header = () => {
 				/>
 				<HeaderItem title="TASDIQLANGAN" Icon={BadgeCheckIcon} />
 				<HeaderItem title="KOLLEKSIYA" Icon={CollectionIcon} /> */}
-				<div className="flex translate-y-6">
-					<HeaderItem title="QIDIRUV" Icon={SearchIcon} />
+				<div className="flex translate-y-5 md:translate-y-6">
+					<HeaderItem title="QIDIRUV" Icon={SearchIcon} className="" />
 					<HeaderItem title="PROFIL" Icon={UserIcon} />
 				</div>
 				<button
 					onClick={logout}
-					className="my-4 mx-4 p-1 lg:p-2 border-2 rounded-full font-semibold transition duration-200 ease-in cursor-pointer transform hover:scale-x-105 hover:text-orange-400 hover:border-orange-400"
+					className="my-4 mx-2 md:mx-4 p-1 lg:p-2 border-2 rounded-full font-semibold transition duration-200 ease-in cursor-pointer transform hover:scale-x-105 hover:text-orange-400 hover:border-orange-400"
 				>
 					Chiqish
 				</button>

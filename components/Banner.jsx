@@ -18,7 +18,7 @@ const Banner = ({ trends }) => {
 
 	return (
 		<div className="flex flex-col lg:h-[80vh]">
-			<div className="absolute top-0 left-0 h-[64vh] lg:h-[80vh] w-screen -z-50">
+			<div className="absolute top-0 left-0 min-h-[65vh] lg:h-[80vh] w-screen -z-50">
 				<Image
 					src={`${baseUrl}${movie?.backdrop_path}`}
 					alt=""
@@ -28,7 +28,7 @@ const Banner = ({ trends }) => {
 				/>
 			</div>
 
-			<div className="space-y-4 md:space-y-8 bg-gray-600/50 max-w-fit p-4 mt-64">
+			<div className="space-y-4 md:space-y-8 bg-black/40 max-w-fit p-4 mt-64">
 				<h1 className="text-2xl md:text-4xl lg:text-7xl">
 					{movie?.title || movie?.name || movie?.original_name}
 				</h1>
@@ -48,7 +48,7 @@ const Banner = ({ trends }) => {
 						Play
 					</button>
 					<button className="bannerBtn bg-gray-600/70">
-						More Info{" "}
+						Ko&apos;proq malumot{" "}
 						<InformationCircleIcon className="h-5 w-5 md:h-6 md:w-6" />
 					</button>
 				</div>
