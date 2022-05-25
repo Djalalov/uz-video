@@ -14,7 +14,7 @@
 
 @layer components {
 	.btn {
-		@apply text-lg rounded-full px-2 py-1 border-2 border-slate-400 focus:outline-none focus:text-orange-400 focus:border-orange-400 font-bold transition duration-200 ease-in last:mr-10 cursor-pointer transform hover:scale-x-105;
+		@apply text-lg rounded-full px-2 py-1 border-2 border-slate-400 focus:outline-none focus:text-orange-400 focus:border-orange-400 font-bold transition duration-200 ease-in last:mr-10 cursor-pointer transform hover:scale-x-105 hover:text-orange-400 hover:border-orange-400;
 	}
 
 	.bannerBtn {

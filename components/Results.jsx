@@ -11,6 +11,9 @@ const Results = ({ results }) => {
 					<Thumbnail key={result.id} result={result} />
 				))}
 			</div>
+			<footer className="flex items-center justify-center border-t border-black/70 text-slate-300/80 text-sm font-semibold md:text-base h-8 lg:h-10 bg-black/70">
+				<div>Uz Video | Elyorbek Djalalov | 2022</div>
+			</footer>
 		</FlipMove>
 	);
 };
