@@ -55,7 +55,7 @@ const Modal = () => {
 		<MuiModal
 			open={showModal}
 			onClose={handleClose}
-			className="fixed !top-7 left-0 right-0 z-50 mx-auto w-full max-w-5xl overflow-hidden overflow-y-scroll rounded-md scrollbar-hide"
+			className="fixed !top-0 left-0 right-0 z-50 mx-auto w-full max-w-5xl overflow-hidden overflow-y-scroll rounded-md scrollbar-hide"
 		>
 			<>
 				<div className="relative pt-[56.25%]">

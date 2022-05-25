@@ -47,7 +47,7 @@ const Header = () => {
 					objectFit="contain"
 				/>
 			</div>
-			<div className="flex translate-y-5">
+			<div className="flex ">
 				{/* 	<HeaderItem title="ASOSIY" Icon={HomeIcon} /> */}
 				{/* 		<HeaderItem
 					title="TREND"
@@ -58,9 +58,14 @@ const Header = () => {
 				/>
 				<HeaderItem title="TASDIQLANGAN" Icon={BadgeCheckIcon} />
 				<HeaderItem title="KOLLEKSIYA" Icon={CollectionIcon} /> */}
-				<HeaderItem title="QIDIRUV" Icon={SearchIcon} />
-				<HeaderItem title="PROFIL" Icon={UserIcon} />
-				<button onClick={logout} className="btn">
+				<div className="flex translate-y-6">
+					<HeaderItem title="QIDIRUV" Icon={SearchIcon} />
+					<HeaderItem title="PROFIL" Icon={UserIcon} />
+				</div>
+				<button
+					onClick={logout}
+					className="my-4 mx-4 p-1 lg:p-2 border-2 rounded-full font-semibold transition duration-200 ease-in cursor-pointer transform hover:scale-x-105 hover:text-orange-400 hover:border-orange-400"
+				>
 					Chiqish
 				</button>
 			</div>{" "}

@@ -21,14 +21,5 @@ const requests = {
 		title: "Qorqinchli",
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
 	},
-	fetchRomanceMovies: {
-		title: "Romantika",
-		url: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-	},
-
-	fetchDocumentaries: {
-		title: "Hujjatli filmlar",
-		url: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
-	},
 };
 export default requests;
