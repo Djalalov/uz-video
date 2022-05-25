@@ -4,15 +4,18 @@ import Image from "next/image";
 import { baseUrl } from "../utils/const";
 import { FaPlay } from "react-icons/fa";
 import { InformationCircleIcon } from "@heroicons/react/outline";
+import { modalState, movieState } from "../atoms/modalAtom";
+import { useRecoilState } from "recoil";
 
 const Banner = ({ trends }) => {
 	const [movie, setMovie] = useState(null);
+	const [showModal, setShowModal] = useRecoilState(modalState);
+	const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
 
 	useEffect(() => {
 		setMovie(trends[Math.floor(Math.random() * trends.length)]);
 	}, [trends]);
 
-	//console.log(`${baseUrl}${movie?.backdrop_path || movie.poster_path}`);
 	return (
 		<div className="flex flex-col lg:h-[80vh]">
 			<div className="absolute top-0 left-0 h-[64vh] lg:h-[80vh] w-screen -z-50">
@@ -34,7 +37,13 @@ const Banner = ({ trends }) => {
 				</p>
 
 				<div className="flex space-x-3">
-					<button className="bannerBtn bg-white text-black">
+					<button
+						onClick={() => {
+							setCurrentMovie(movie);
+							setShowModal(true);
+						}}
+						className="bannerBtn bg-white text-black"
+					>
 						<FaPlay className="h-4 w-4 text-black md:h-5 md:w-5pg" />
 						Play
 					</button>

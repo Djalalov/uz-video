@@ -6,11 +6,13 @@ import Banner from "../components/Banner";
 import Nav from "../components/Nav";
 import useAuth from "../hooks/useAuth";
 import Modal from "../components/Modal";
+import { useRecoilValue } from "recoil";
+import { modalState, movieState } from "../atoms/modalAtom";
 
 export default function Home(props) {
 	const { loading } = useAuth();
 	const showModal = useRecoilValue(modalState);
-
+	const movie = useRecoilValue(movieState);
 	if (loading) {
 		return null;
 	}
@@ -26,8 +28,6 @@ export default function Home(props) {
 			<main className="relative lg:space-y-24">
 				<Results results={props.results} />
 			</main>
-
-			{/* Modal */}
 			{showModal && <Modal />}
 		</div>
 	);

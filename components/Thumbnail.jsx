@@ -2,12 +2,21 @@
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import { forwardRef } from "react";
+import { useRecoilState } from "recoil";
+import { modalState, movieState } from "../atoms/modalAtom";
 
 const Thumbnail = forwardRef(({ result }, ref) => {
 	const BASE_URL = "https://image.tmdb.org/t/p/original/";
 
+	const [showModal, setShowModal] = useRecoilState(modalState);
+	const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
+
 	return (
 		<div
+			onClick={() => {
+				setCurrentMovie(result);
+				setShowModal(true);
+			}}
 			ref={ref}
 			className="group cursor-pointer sm:rounded-xl transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 mb-5 sm:mb-0 xs:border-b border-slate-300 sm:m-2 sm:max-w-md lg:max-w-lg lg:mt-2"
 		>

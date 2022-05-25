@@ -14,6 +14,7 @@ const Login = () => {
 		handleSubmit,
 		formState: { errors },
 	} = useForm();
+
 	const onSubmit = async ({ email, password }) => {
 		if (login) {
 			await signIn(email, password);
