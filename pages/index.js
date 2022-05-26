@@ -1,14 +1,13 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import Header from "../components/Header";
 import Results from "../components/Results";
 import requests from "../utils/requests";
 import Banner from "../components/Banner";
 import Nav from "../components/Nav";
+import Modal from "../components/Modal";
 import useAuth from "../hooks/useAuth";
 import { useRecoilValue } from "recoil";
 import { modalState, movieState } from "../atoms/modalAtom";
-const Modal = dynamic(() => import("../components/Modal"));
 
 export default function Home(props) {
 	const { loading } = useAuth();
