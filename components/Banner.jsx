@@ -18,7 +18,7 @@ const Banner = ({ trends }) => {
 
 	return (
 		<div className="flex flex-col lg:h-[80vh]">
-			<div className="absolute top-0 left-0 min-h-[65vh] lg:h-[80vh] w-screen -z-50">
+			<div className="absolute top-0 left-0 min-h-[85vh] lg:h-[80vh] w-screen -z-50 ">
 				<Image
 					src={`${baseUrl}${movie?.backdrop_path}`}
 					alt=""

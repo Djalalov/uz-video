@@ -38,11 +38,11 @@ const Header = () => {
 		<header
 			className={`${isSrolled && "bg-black/40 backdrop-blur-sm"} w-full `}
 		>
-			<div className="pl-2">
+			<div className="pl-2 ">
 				<Image
 					src={logo}
 					alt="logo"
-					width="180"
+					width="160"
 					height="75"
 					objectFit="contain"
 				/>

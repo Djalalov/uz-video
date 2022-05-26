@@ -18,7 +18,7 @@ export default function Home(props) {
 	}
 
 	return (
-		<div className="flex min-h-screen flex-col relative">
+		<div className="flex min-h-screen flex-col relative ">
 			<Head>
 				<title>Asosiy | Uz Video</title>
 			</Head>
