@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth"; // TODO: Add SDKs for Firebase products
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyC0qB3z7SKLWqVjkR-zeHV_B9SeV9dvhNk",
+	apiKey: process.env.FIREBASE_API_KEY,
 	authDomain: "uz-video.firebaseapp.com",
 	projectId: "uz-video",
 	storageBucket: "uz-video.appspot.com",
